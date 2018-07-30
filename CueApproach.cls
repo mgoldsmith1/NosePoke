@@ -272,7 +272,7 @@ Sub YokeInfoForCueApproach(ThisFile, NumofFiles, ProgramRan)
             
             Else
             
-                If Col >= 0 And WheelTurnTime(x) > -1 Then  <-- This could be the problem
+                If Col >= 0 And LeverPressTime(x) > -1 Then      ' WheelTurnTime(x) > -1 Then  <-- This could be the problem
                     Col = Col + 1
                 End If
             
@@ -297,7 +297,7 @@ Sub YokeInfoForCueApproach(ThisFile, NumofFiles, ProgramRan)
     Title1$ = "Cue Time"
     Title2$ = "Cue Total"
     Call ExcelPrintYokeInfoForCueApproach(ThisFile, Title1$, Title2$, totNumCue, CueTime, ProgramRan)
-    
+   
     
     'Print Time of FoodReward / Pellets
     Range("J4").Select
